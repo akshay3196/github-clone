@@ -7,11 +7,13 @@ import RecentRepos from '../components/RecentRepos'
 import FullHeader from '../components/FullHeader'
 import RightSide from '../components/RightSide'
 
+// md:h-screen
+
 const Home: NextPage = () => {
   return (
     <>
     <FullHeader />
-    <div className="bg-black text-white w-full  md:flex  md:h-screen h-auto bg-cover">
+    <div className="bg-black text-white md:flex w-[100%]  h-[100%] bg-cover">
       <Head>
         <title>GitHub</title>
         <link rel="icon" href="/favicon.ico" />
@@ -31,5 +33,7 @@ const Home: NextPage = () => {
     
   )
 }
+
+
 
 export default Home
