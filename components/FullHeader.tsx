@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { AiFillGithub,AiOutlineBell,AiOutlinePlus,AiOutlineArrowDown ,AiOutlineUser} from 'react-icons/ai'
 import { BsSlash } from 'react-icons/bs'
@@ -18,7 +19,7 @@ const FullHeader = () => {
       </div>
 
       <div className='w-2/4 flex items-center justify-start space-x-5 px-4 text-sm font-bold text-white ' >
-        <span>Pull Request</span>
+        <span>  <Link href='/pulls' >Pull Request</Link></span>
         <span>Issues</span>
         <span>Marketplace</span>
         <span>Explore</span>
