@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { AiFillGithub,AiOutlineBell,AiOutlinePlus,AiOutlineArrowDown ,AiOutlineUser} from 'react-icons/ai'
 import { BsSlash } from 'react-icons/bs'
+import dynamic from 'next/dynamic'
+
 
 
 const options = [
@@ -13,8 +15,12 @@ const options = [
 
 const FullHeader = () => {
   const router = useRouter()
+
+  
+
   return (
     <div className='w-full  items-center bg-black p-3 text-white hidden md:inline-flex ' >
+      
       <div className='w-1/4 flex justify-center items-center px-4 ' >
 
       <AiFillGithub className='text-white h-9 w-9' onClick={()=>router.push('/')} />
