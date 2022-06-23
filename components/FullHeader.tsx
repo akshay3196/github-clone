@@ -20,7 +20,7 @@ const FullHeader = () => {
 
       <div className='w-2/4 flex items-center justify-start space-x-5 px-4 text-sm font-bold text-white ' >
         <span>  <Link href='/pulls' >Pull Request</Link></span>
-        <span>Issues</span>
+        <span><Link href='/issues' >Issues</Link></span>
         <span>Marketplace</span>
         <span>Explore</span>
       </div>

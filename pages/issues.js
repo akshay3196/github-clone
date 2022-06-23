@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import FullHeader from '../components/FullHeader'
 import {BsSearch} from 'react-icons/bs'
@@ -11,10 +10,8 @@ import {BiUser} from 'react-icons/bi'
 import {MdControlPointDuplicate} from 'react-icons/md'
 import PullPageFooter from '../components/PullPageFooter'
 
-const PullRequest = () => {
-
-const [tip, settip] = useState('Mix and match filters to narrow down what you’re looking htmlFor.')
-
+const Issues = () => {
+    const [tip, settip] = useState('Add no:assignee to see everything that’s not assigned.')
   return (
     <>
     {/* modal 1 */}
@@ -73,11 +70,10 @@ const [tip, settip] = useState('Mix and match filters to narrow down what you’
         <div className=' w-full  p-2 md:p-0 md:w-3/4 mx-auto flex  justify-between items-center  ' >
             <div className='flex mt-2  flex-col lg:flex-row items-center justify-around w-full space-y-4 lg:space-y-0 lg:space-x-16 ' >
             <div className=' flex items-center ' >
-                <button className='px-3 py-1 border border-gray-700 rounded-l-md focus:bg-blue-500 ' onClick={()=>settip('Mix and match filters to narrow down what you’re looking htmlFor.')} >Created</button>
-                <button className='px-3 py-1 border border-gray-700 focus:bg-blue-500' onClick={()=>settip('Follow long discussions with comments:>50.')} >Assigned</button>
-                <button className='px-3 py-1 border border-gray-700 focus:bg-blue-500' onClick={()=>settip('Find everything you created by searching author:akshay3196.')}>Mentioned</button>
-                <button className='px-3 py-1 border border-gray-700 rounded-r-md  items-center space-x-1 hidden md:inline-flex focus:bg-blue-500' onClick={()=>settip('Mix and match filters to narrow down what you’re looking htmlFor.')} > <span>Review</span> <span>requests</span> </button>
-            </div>
+                <button className='px-3 py-1 border border-gray-700 rounded-l-md focus:bg-blue-500 ' onClick={()=>settip('Add no:assignee to see everything that’s not assigned.')} >Created</button>
+                <button className='px-3 py-1 border border-gray-700 focus:bg-blue-500' onClick={()=>settip('Notify someone on an issue with a mention, like: @akshay3196.')} >Assigned</button>
+                <button className='px-3 py-1 border border-gray-700 focus:bg-blue-500' onClick={()=>settip('Notify someone on an issue with a mention, like: @akshay3196.')}>Mentioned</button>
+                </div>
 
             <div className='flex   border  border-gray-700 rounded-md items-center  px-3 py-1 space-x-3 w-full '>
                 <BsSearch className='' />
@@ -194,4 +190,4 @@ const [tip, settip] = useState('Mix and match filters to narrow down what you’
   )
 }
 
-export default PullRequest
+export default Issues
