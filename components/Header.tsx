@@ -4,6 +4,10 @@ import {AiFillGithub} from 'react-icons/ai'
 import {BsBell,BsSlash} from 'react-icons/bs'
 import {FaUser} from 'react-icons/fa'
 import {IoMdExit} from 'react-icons/io'
+import {
+    UserProfile,
+    UserButton,
+  } from "@clerk/clerk-react";
 
 const Header = () => {
 
@@ -14,7 +18,8 @@ const [dropDown, setDropDown] = useState(false)
     <div className=''>
         <div className='flex justify-between items-center p-4  md:hidden '>
             <FiMenu className='text-white h-7 w-7' onClick={()=> setDropDown(!dropDown) } />
-        <AiFillGithub className='text-white h-9 w-9' />
+        {/* <AiFillGithub className='text-white h-9 w-9' /> */}
+        <UserButton />
        <BsBell className='text-white h-5 w-5' />
         </div>
         {

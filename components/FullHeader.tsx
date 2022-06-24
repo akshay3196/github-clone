@@ -5,13 +5,14 @@ import { AiFillGithub,AiOutlineBell,AiOutlinePlus,AiOutlineArrowDown ,AiOutlineU
 import { BsSlash } from 'react-icons/bs'
 import dynamic from 'next/dynamic'
 
+import {
+  UserProfile,
+  UserButton,
+} from "@clerk/clerk-react";
 
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
-]
+
+
 
 const FullHeader = () => {
   const router = useRouter()
@@ -24,6 +25,8 @@ const FullHeader = () => {
       <div className='w-1/4 flex justify-center items-center px-4 ' >
 
       <AiFillGithub className='text-white h-9 w-9' onClick={()=>router.push('/')} />
+      
+
       <input type="text" className='bg-black border ml-3 rounded-md border-gray-600 placeholder:text-gray-300 text-xs p-2 w-full focus:outline-none ' placeholder='Saerch or jump to...' />
       </div>
 
@@ -45,7 +48,8 @@ const FullHeader = () => {
 </select>
 
 </div>
-<AiOutlineUser className='hover:scale-150' />
+<UserButton />
+
       </div>
     </div>
   )
